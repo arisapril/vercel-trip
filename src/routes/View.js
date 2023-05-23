@@ -15,7 +15,7 @@ export default function View() {
     
     async function view() {
         try {
-            const response = await axios.get('http://localhost:5000/api/view');
+            const response = await axios.get('https://weak-ruby-skunk-gown.cyclic.app/api/view');
             setData(response.data);
             let obj = {};
             response.data.map((r,index)=>{
@@ -36,7 +36,7 @@ export default function View() {
     }
 
     async function handleSubmit (id){
-        let response = await axios.put("http://localhost:5000/api/update",{trips:trip,amount:amount,names:name,idticket:id});
+        let response = await axios.put("https://weak-ruby-skunk-gown.cyclic.app/api/update",{trips:trip,amount:amount,names:name,idticket:id});
         alert("แก้ไขสำเร็จ");
         console.log(response);
         setRe(!re);
@@ -44,7 +44,7 @@ export default function View() {
 
     async function del(id) {
         try {
-            const response = await axios.delete('http://localhost:5000/api/delete/'+id);
+            const response = await axios.delete('https://weak-ruby-skunk-gown.cyclic.app/api/delete/'+id);
             alert('ลบข้อมูลสำเร็จ');
             setRe(!re);
         } catch (error) {

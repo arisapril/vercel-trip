@@ -20,7 +20,7 @@ export default function Login(props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/login', {email: email, passwords: pass});
+            const response = await axios.post('https://weak-ruby-skunk-gown.cyclic.app/api/login', {email: email, passwords: pass});
             if (response.data === 'nologin') {
                 Openmodalloginfalse();
             } else {

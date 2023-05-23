@@ -8,7 +8,7 @@ function TripData(props) {
   const navigate = useNavigate();
 
   async function submit() { 
-    const response = await axios.post('http://localhost:5000/api/buy',{trips:props.heading,amount:1,names:cookies.get('user')});
+    const response = await axios.post('https://weak-ruby-skunk-gown.cyclic.app/api/buy',{trips:props.heading,amount:1,names:cookies.get('user')});
     alert('จองสำเร็จ');
     navigate('/view');
   }
